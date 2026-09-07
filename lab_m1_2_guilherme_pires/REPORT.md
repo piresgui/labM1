@@ -23,7 +23,7 @@ distribuição das intensidades.
 - negative: g(x,y) = 255 - f(x,y).
 - threshold: limiarização binária com dois valores de T distintos.
 - histogram: contagem manual de 256 posições, exportada em CSV
-  (intensidade,quantidade).
+  (intensity,count).
 
 Todas as transformações percorrem a imagem com laços explícitos sobre
 linhas e colunas; a saturação para [0,255] é aplicada apenas ao final de
@@ -75,7 +75,7 @@ Testes de ponta a ponta via CLI (`tests/test_cli.py`, 5 casos) cobrindo
 arquivo inexistente, `brightness` sem `--value` (deve falhar), `brightness`
 com sucesso (valor de pixel conferido), `threshold` com dois limiares
 distintos produzindo saídas diferentes, e o formato exato do CSV do
-histograma (cabeçalho `intensidade,quantidade`, 256 linhas de dados, soma
+histograma (cabeçalho `intensity,count`, 256 linhas de dados, soma
 das contagens igual ao número de pixels).
 
 Total: 24 testes, todos passando (`python -m pytest`).

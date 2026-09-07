@@ -109,7 +109,7 @@ def _run_operation(args: argparse.Namespace, gray) -> int:
             os.makedirs(out_dir, exist_ok=True)
         with open(out_path, "w", newline="", encoding="utf-8") as fh:
             writer = csv.writer(fh)
-            writer.writerow(["intensidade", "quantidade"])
+            writer.writerow(["intensity", "count"])
             for intensity, count in enumerate(counts):
                 writer.writerow([intensity, count])
         print(f"saida gravada em {out_path}")

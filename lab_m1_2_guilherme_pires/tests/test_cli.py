@@ -90,7 +90,7 @@ def test_cli_histogram_csv_format(tmp_path):
     assert result.returncode == 0
     with open(out_path, newline="", encoding="utf-8") as fh:
         reader = list(csv.reader(fh))
-    assert reader[0] == ["intensidade", "quantidade"]
+    assert reader[0] == ["intensity", "count"]
     assert len(reader) == 257  # header + 256 linhas
     total = sum(int(row[1]) for row in reader[1:])
     assert total == 2

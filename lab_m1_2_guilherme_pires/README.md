@@ -69,7 +69,7 @@ python -m pdi_lab --input images/input/gradiente_16x16.png --output images/outpu
 python -m pdi_lab --input images/input/gradiente_16x16.png --output images/output/threshold_180.png --operation threshold --threshold 180
 ```
 
-Histograma (CSV `intensidade,quantidade` com 256 linhas de dados):
+Histograma (CSV `intensity,count` com 256 linhas de dados):
 
 ```bash
 python -m pdi_lab --input images/input/gradiente_16x16.png --output results/hist_original.csv --operation histogram
